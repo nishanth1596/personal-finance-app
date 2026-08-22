@@ -1,7 +1,9 @@
 const SideBar = () => {
   return (
-    <aside className="bg-green-500 order-2 fixed bottom-0 w-full">SideBar</aside>
-  )
-}
+    <aside className="fixed bottom-0 order-2 w-full bg-green-500">
+      SideBar
+    </aside>
+  );
+};
 
-export default SideBar
+export default SideBar;

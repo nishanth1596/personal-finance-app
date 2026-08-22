@@ -1,7 +1,6 @@
 @import "tailwindcss";
 
 :root {
-
 }
 
 @theme {
@@ -97,8 +96,5 @@
   font-weight: 700;
 }
 
-
 body {
-
 }
- 

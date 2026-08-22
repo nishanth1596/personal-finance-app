@@ -6,7 +6,7 @@ import SideBar from "@/components/SideBar";
 export const metadata: Metadata = {
   title: "Personal Finance App",
   description: "A personal finance management application.",
-}
+};
 
 const publicSans = Public_Sans({
   subsets: ["latin"],
@@ -20,10 +20,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${publicSans.variable} antialiased bg-background`}>
-        <main className="min-h-screen flex flex-col">
-        <SideBar />
-        {children}
+      <body className={`${publicSans.variable} bg-background antialiased`}>
+        <main className="flex min-h-screen flex-col">
+          <SideBar />
+          {children}
         </main>
       </body>
     </html>
