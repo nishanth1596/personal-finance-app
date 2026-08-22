@@ -52,6 +52,9 @@
   --spacing-300: 24px;
   --spacing-400: 32px;
   --spacing-500: 40px;
+
+  /* Shadows */
+  --shadow-card: 0 8px 24px 0 rgba(0, 0, 0, 0.05);
 }
 
 @utility text-preset-1 {

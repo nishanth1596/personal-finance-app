@@ -8,7 +8,9 @@ const SummaryItem = ({ theme, title, value }: SummaryProps) => {
   const isDark = theme === "dark";
 
   return (
-    <div className={`${isDark ? "bg-gray-900" : "bg-white"} rounded-xl p-5`}>
+    <div
+      className={`${isDark ? "bg-gray-900" : "bg-white"} shadow-card rounded-xl p-5`}
+    >
       <p className={`${isDark ? "text-white" : "text-gray-500"} text-preset-4`}>
         {title}
       </p>
@@ -27,7 +29,7 @@ const SummaryItem = ({ theme, title, value }: SummaryProps) => {
 
 const Summary = () => {
   return (
-    <article className="flex flex-col gap-3 py-8">
+    <article className="flex flex-col gap-3 pt-8">
       <SummaryItem theme="dark" title="Current Balance" value={4836} />
       <SummaryItem theme="light" title="Income" value={3814.25} />
       <SummaryItem theme="light" title="Expenses" value={1700.5} />

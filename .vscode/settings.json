@@ -1,4 +1,15 @@
 {
   "editor.formatOnSave": true,
-  "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+  "auto-rename-tag.activationOnLanguage": [
+    "html",
+    "javascriptreact",
+    "typescriptreact"
+  ],
+
+  "html.autoClosingTags": true,
+  "javascript.autoClosingTags": true,
+  "typescript.autoClosingTags": true,
+  "editor.wordWrap": "on"
 }
