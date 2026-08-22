@@ -1,10 +1,14 @@
-type SummaryProps = {
+type FinancialSummaryProps = {
   theme: "light" | "dark";
   title: "Current Balance" | "Income" | "Expenses";
   value: number;
 };
 
-const SummaryItem = ({ theme, title, value }: SummaryProps) => {
+const FinancialSummaryItem = ({
+  theme,
+  title,
+  value,
+}: FinancialSummaryProps) => {
   const isDark = theme === "dark";
 
   return (
@@ -27,14 +31,14 @@ const SummaryItem = ({ theme, title, value }: SummaryProps) => {
   );
 };
 
-const Summary = () => {
+const FinancialSummary = () => {
   return (
     <article className="flex flex-col gap-3 pt-8">
-      <SummaryItem theme="dark" title="Current Balance" value={4836} />
-      <SummaryItem theme="light" title="Income" value={3814.25} />
-      <SummaryItem theme="light" title="Expenses" value={1700.5} />
+      <FinancialSummaryItem theme="dark" title="Current Balance" value={4836} />
+      <FinancialSummaryItem theme="light" title="Income" value={3814.25} />
+      <FinancialSummaryItem theme="light" title="Expenses" value={1700.5} />
     </article>
   );
 };
 
-export default Summary;
+export default FinancialSummary;
