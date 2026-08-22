@@ -8,9 +8,7 @@ const Summary = ({ theme, title, value }: SummaryProps) => {
   const isDark = theme === "dark";
 
   return (
-    <article
-      className={`${isDark ? "bg-gray-900" : "bg-white"} rounded-xl p-5`}
-    >
+    <div className={`${isDark ? "bg-gray-900" : "bg-white"} rounded-xl p-5`}>
       <p className={`${isDark ? "text-white" : "text-gray-500"} text-preset-4`}>
         {title}
       </p>
@@ -23,7 +21,7 @@ const Summary = ({ theme, title, value }: SummaryProps) => {
           maximumFractionDigits: 2,
         })}
       </p>
-    </article>
+    </div>
   );
 };
 
