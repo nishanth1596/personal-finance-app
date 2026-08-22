@@ -4,7 +4,7 @@ type SummaryProps = {
   value: number;
 };
 
-const Summary = ({ theme, title, value }: SummaryProps) => {
+const SummaryItem = ({ theme, title, value }: SummaryProps) => {
   const isDark = theme === "dark";
 
   return (
@@ -22,6 +22,16 @@ const Summary = ({ theme, title, value }: SummaryProps) => {
         })}
       </p>
     </div>
+  );
+};
+
+const Summary = () => {
+  return (
+    <article className="flex flex-col gap-3 py-8">
+      <SummaryItem theme="dark" title="Current Balance" value={4836} />
+      <SummaryItem theme="light" title="Income" value={3814.25} />
+      <SummaryItem theme="light" title="Expenses" value={1700.5} />
+    </article>
   );
 };
 
