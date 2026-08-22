@@ -1,6 +1,7 @@
 import { Public_Sans } from "next/font/google";
 import "./globals.css";
 import { Metadata } from "next";
+import SideBar from "@/components/SideBar";
 
 export const metadata: Metadata = {
   title: "Personal Finance App",
@@ -19,8 +20,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${publicSans.variable} antialiased`}>
+      <body className={`${publicSans.variable} antialiased bg-background`}>
+        <main className="min-h-screen flex flex-col">
+        <SideBar />
         {children}
+        </main>
       </body>
     </html>
   );
