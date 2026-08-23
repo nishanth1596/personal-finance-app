@@ -1,12 +1,13 @@
 import OverviewCard from "@/components/shared/Overview/OverviewCard";
 import SummaryItem from "@/components/shared/Overview/SummaryItem";
+import BudgetPieChart from "@/components/shared/BudgetPieChart";
 import { budgets } from "@/constants/constants";
 
 const BudgetsSummary = () => {
   console.log("heya", budgets);
   return (
     <OverviewCard link="/budgets" linkName="See Details" title="Budgets">
-      <div className="pt-7">chart</div>
+      <BudgetPieChart />
       <div className="grid grid-cols-2 gap-y-4 pt-5">
         {budgets.slice(0, 4).map((item, i) => (
           <SummaryItem
