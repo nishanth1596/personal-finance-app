@@ -392,3 +392,65 @@ export const transactions = [
     recurring: false,
   },
 ];
+
+export const budgets = [
+  {
+    category: "Entertainment",
+    maximum: 50.0,
+    theme: "#826cb0",
+  },
+  {
+    category: "Bills",
+    maximum: 750.0,
+    theme: "#82c9d7",
+  },
+  {
+    category: "Dining Out",
+    maximum: 75.0,
+    theme: "#f2cdac",
+  },
+  {
+    category: "Personal Care",
+    maximum: 100.0,
+    theme: "#277c78",
+  },
+];
+
+export const pots = [
+  {
+    name: "Savings",
+    target: 2000.0,
+    total: 159.0,
+    theme: "#277c78",
+  },
+  {
+    name: "Concert Ticket",
+    target: 150.0,
+    total: 110.0,
+    theme: "#626070",
+  },
+  {
+    name: "Gift",
+    target: 50.0,
+    total: 40.0,
+    theme: "#82c9d7",
+  },
+  {
+    name: "New Laptop",
+    target: 1000.0,
+    total: 10.0,
+    theme: "#f2cdac",
+  },
+  {
+    name: "Car",
+    target: 10000.0,
+    total: 0.0,
+    theme: "#c94736",
+  },
+];
+
+export const balance = {
+  income: 3814.25,
+  current: 4836.0,
+  expenses: 1700.5,
+};

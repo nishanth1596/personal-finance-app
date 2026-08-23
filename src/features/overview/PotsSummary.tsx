@@ -1,23 +1,7 @@
 import Image from "next/image";
 import OverviewCard from "@/components/shared/Overview/OverviewCard";
-
-type PotsSummaryItemProps = {
-  title: string;
-  value: number;
-  color: string;
-};
-
-const PotsSummaryItem = ({ title, value, color }: PotsSummaryItemProps) => {
-  return (
-    <div className="flex gap-4">
-      <div className={`${color} w-1 rounded-lg`}></div>
-      <div>
-        <p className="text-preset-5 text-grey-500">{title}</p>
-        <p className="text-preset-4-bold text-grey-900">${value}</p>
-      </div>
-    </div>
-  );
-};
+import SummaryItem from "@/components/shared/Overview/SummaryItem";
+import { pots } from "@/constants/constants";
 
 const PotsSummary = () => {
   return (
@@ -32,10 +16,14 @@ const PotsSummary = () => {
         </div>
 
         <div className="grid grid-cols-2 gap-y-4 pt-5">
-          <PotsSummaryItem color="bg-green" title="Savings" value={159} />
-          <PotsSummaryItem color="bg-cyan" title="Gift" value={40} />
-          <PotsSummaryItem color="bg-navy" title="Concert Ticket" value={110} />
-          <PotsSummaryItem color="bg-yellow" title="New Laptop" value={10} />
+          {pots.slice(0, 4).map((item, i) => (
+            <SummaryItem
+              key={i}
+              color={item.theme}
+              title={item.name}
+              value={item.total}
+            />
+          ))}
         </div>
       </div>
     </OverviewCard>
