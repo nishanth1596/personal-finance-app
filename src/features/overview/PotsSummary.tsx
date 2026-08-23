@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
+import OverviewCard from "@/components/shared/Overview/OverviewCard";
 
 type PotsSummaryItemProps = {
   title: string;
@@ -21,20 +21,7 @@ const PotsSummaryItem = ({ title, value, color }: PotsSummaryItemProps) => {
 
 const PotsSummary = () => {
   return (
-    <article className="shadow-card rounded-xl bg-white p-6">
-      <div className="flex justify-between">
-        <h2 className="text-preset-2 text-grey-900">Pots</h2>
-        <Link href={"/pots"} className="text-grey-500 flex items-center gap-4">
-          See Details
-          <Image
-            alt=""
-            src={"/images/icon-caret-right.svg"}
-            width={8.25}
-            height={4}
-          />
-        </Link>
-      </div>
-
+    <OverviewCard title="Pots" linkName="See Details" link="/pots">
       <div className="grid grid-cols-1 pt-5">
         <div className="bg-beige-100 flex gap-4 rounded-xl px-4 py-5">
           <Image alt="" src={"/images/icon-pot.svg"} height={34} width={27} />
@@ -51,7 +38,7 @@ const PotsSummary = () => {
           <PotsSummaryItem color="bg-yellow" title="New Laptop" value={10} />
         </div>
       </div>
-    </article>
+    </OverviewCard>
   );
 };
 

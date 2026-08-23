@@ -1,5 +1,6 @@
 import FinancialSummary from "./FinancialSummary";
 import PotsSummary from "./PotsSummary";
+import TransationsSummary from "./TransationsSummary";
 
 const Overview = () => {
   return (
@@ -7,8 +8,9 @@ const Overview = () => {
       <h1 className="text-preset-1">Overview</h1>
       <FinancialSummary />
 
-      <div className="pt-8 pb-6">
+      <div className="space-y-6 pt-8 pb-6">
         <PotsSummary />
+        <TransationsSummary />
       </div>
     </section>
   );

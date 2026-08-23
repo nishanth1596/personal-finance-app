@@ -1,0 +1,7 @@
+{
+  "Console Log Heya": {
+    "prefix": "cl",
+    "body": ["console.log('heya', $1)"],
+    "description": "Console log with heya",
+  },
+}
