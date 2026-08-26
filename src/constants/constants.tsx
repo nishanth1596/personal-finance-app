@@ -491,11 +491,6 @@ export const navItems = [
     icon: "/images/icon-nav-overview.svg",
   },
   {
-    name: "Pots",
-    href: "/pots",
-    icon: "/images/icon-nav-pots.svg",
-  },
-  {
     name: "Transactions",
     href: "/transactions",
     icon: "/images/icon-nav-transactions.svg",
@@ -504,6 +499,11 @@ export const navItems = [
     name: "Budgets",
     href: "/budgets",
     icon: "/images/icon-nav-budgets.svg",
+  },
+  {
+    name: "Pots",
+    href: "/pots",
+    icon: "/images/icon-nav-pots.svg",
   },
   {
     name: "Recurring Bills",
