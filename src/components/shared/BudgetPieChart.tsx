@@ -20,6 +20,12 @@ const BudgetPieChart = ({ data }: BudgetPieChartProps) => {
           width: "100%",
           height: "100%",
         }}
+        margin={{
+          top: 0,
+          right: 0,
+          bottom: 0,
+          left: 0,
+        }}
       >
         {/* Outer ring - budget limit */}
         <Pie
@@ -28,8 +34,8 @@ const BudgetPieChart = ({ data }: BudgetPieChartProps) => {
           nameKey="name"
           cx="50%"
           cy="50%"
-          innerRadius="60%"
-          outerRadius="80%"
+          innerRadius="75%"
+          outerRadius="100%"
           stroke="white"
           strokeWidth={2}
           isAnimationActive={false}
@@ -44,12 +50,12 @@ const BudgetPieChart = ({ data }: BudgetPieChartProps) => {
         {/* Inner ring - amount spent */}
         <Pie
           data={data}
-          dataKey="maximum"
+          dataKey="spent"
           nameKey="name"
           cx="50%"
           cy="50%"
-          innerRadius="45%"
-          outerRadius="60%"
+          innerRadius="55%"
+          outerRadius="75%"
           stroke="white"
           strokeWidth={2}
           fillOpacity={0.35}

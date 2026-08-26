@@ -15,7 +15,7 @@ const OverviewCard = ({
   children,
 }: OverviewCardProps) => {
   return (
-    <article className="shadow-card rounded-xl bg-white p-6">
+    <article className="shadow-card rounded-xl bg-white p-6 md:p-8">
       <div className="flex justify-between">
         <h2 className="text-preset-2 text-grey-900">{title}</h2>
         <Link href={link} className="text-grey-500 flex items-center gap-4">

@@ -13,7 +13,7 @@ const FinancialSummaryItem = ({
 
   return (
     <div
-      className={`${isDark ? "bg-gray-900" : "bg-white"} shadow-card rounded-xl p-5`}
+      className={`${isDark ? "bg-gray-900" : "bg-white"} shadow-card rounded-xl p-5 md:p-6`}
     >
       <p className={`${isDark ? "text-white" : "text-gray-500"} text-preset-4`}>
         {title}
@@ -33,7 +33,7 @@ const FinancialSummaryItem = ({
 
 const FinancialSummary = () => {
   return (
-    <article className="flex flex-col gap-3 pt-8">
+    <article className="grid grid-cols-1 gap-3 pt-8 md:grid md:grid-cols-3 md:gap-6">
       <FinancialSummaryItem theme="dark" title="Current Balance" value={4836} />
       <FinancialSummaryItem theme="light" title="Income" value={3814.25} />
       <FinancialSummaryItem theme="light" title="Expenses" value={1700.5} />

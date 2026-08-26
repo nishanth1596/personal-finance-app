@@ -6,7 +6,7 @@ import TransationsSummary from "./TransationsSummary";
 
 const Overview = () => {
   return (
-    <section className="order-1 px-4 py-6">
+    <section className="order-1 px-4 py-6 md:p-10">
       <h1 className="text-preset-1">Overview</h1>
       <FinancialSummary />
 

@@ -6,7 +6,7 @@ import { pots } from "@/constants/constants";
 const PotsSummary = () => {
   return (
     <OverviewCard title="Pots" linkName="See Details" link="/pots">
-      <div className="grid grid-cols-1 pt-5">
+      <div className="grid grid-cols-1 pt-5 md:grid-cols-[247fr_357fr] md:gap-x-5">
         <div className="bg-beige-100 flex gap-4 rounded-xl px-4 py-5">
           <Image alt="" src={"/images/icon-pot.svg"} height={34} width={27} />
           <p className="text-preset-4 text-grey-500 flex flex-col">
@@ -15,7 +15,7 @@ const PotsSummary = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 gap-y-4 pt-5">
+        <div className="grid grid-cols-2 gap-y-4 pt-5 md:pt-1">
           {pots.slice(0, 4).map((item, i) => (
             <SummaryItem
               key={i}
