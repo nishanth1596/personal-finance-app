@@ -483,3 +483,31 @@ export const recurringBills = [
     color: "#F2CDAC",
   },
 ];
+
+export const navItems = [
+  {
+    name: "Overview",
+    href: "/",
+    icon: "/images/icon-nav-overview.svg",
+  },
+  {
+    name: "Pots",
+    href: "/pots",
+    icon: "/images/icon-nav-pots.svg",
+  },
+  {
+    name: "Transactions",
+    href: "/transactions",
+    icon: "/images/icon-nav-transactions.svg",
+  },
+  {
+    name: "Budgets",
+    href: "/budgets",
+    icon: "/images/icon-nav-budgets.svg",
+  },
+  {
+    name: "Recurring Bills",
+    href: "/bills",
+    icon: "/images/icon-nav-recurring-bills.svg",
+  },
+];
