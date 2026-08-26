@@ -465,3 +465,21 @@ export const balance = {
   current: 4836.0,
   expenses: 1700.5,
 };
+
+export const recurringBills = [
+  {
+    name: "Paid Bills",
+    amount: 190,
+    color: "#277C78",
+  },
+  {
+    name: "Total Upcoming",
+    amount: 194.98,
+    color: "#82C9D7",
+  },
+  {
+    name: "Due Soon",
+    amount: 59.98,
+    color: "#F2CDAC",
+  },
+];
