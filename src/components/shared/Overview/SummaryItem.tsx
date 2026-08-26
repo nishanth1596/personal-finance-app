@@ -13,7 +13,7 @@ const SummaryItem = ({ title, value, color }: PotsSummaryItemProps) => {
       ></div>
       <div>
         <p className="text-preset-5 text-grey-500">{title}</p>
-        <p className="text-preset-4-bold text-grey-900">${value}</p>
+        <p className="text-preset-4-bold text-grey-900">${value.toFixed(2)}</p>
       </div>
     </div>
   );

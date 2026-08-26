@@ -393,25 +393,36 @@ export const transactions = [
   },
 ];
 
-export const budgets = [
+export type Budget = {
+  category: string;
+  maximum: number;
+  theme: string;
+  spent: number;
+};
+
+export const budgets: Budget[] = [
   {
     category: "Entertainment",
-    maximum: 50.0,
+    maximum: 50,
+    spent: 20,
     theme: "#826cb0",
   },
   {
     category: "Bills",
-    maximum: 750.0,
+    maximum: 750,
+    spent: 250,
     theme: "#82c9d7",
   },
   {
     category: "Dining Out",
-    maximum: 75.0,
+    maximum: 75,
+    spent: 38,
     theme: "#f2cdac",
   },
   {
     category: "Personal Care",
-    maximum: 100.0,
+    maximum: 100,
+    spent: 30,
     theme: "#277c78",
   },
 ];

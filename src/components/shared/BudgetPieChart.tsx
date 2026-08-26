@@ -1,54 +1,78 @@
-// "use client";
-// import { budgets } from "@/constants/constants";
-// import {
-//   PieChart,
-//   Pie,
-//   Cell,
-//   Tooltip,
-//   Legend,
-//   ResponsiveContainer,
-// } from "recharts";
+"use client";
 
-// const BudgetPieChart = () => {
-//   console.log("heya", budgets);
-//   // return <div className="pt-7"></div>;
-//   <div className="flex h-[400px] w-full items-center justify-center p-4">
-//     <ResponsiveContainer width="100%" height="100%">
-//       <PieChart>
-//         {/* Tooltip shows data data-on-hover */}
-//         <Tooltip />
+import type { BudgetChartData } from "@/utils/utils";
+import { Cell, Pie, PieChart } from "recharts";
 
-//         {/* Legend maps categories to colors at the bottom */}
-//         <Legend layout="horizontal" verticalAlign="bottom" align="center" />
+type BudgetPieChartProps = {
+  data: BudgetChartData[];
+};
 
-//         <Pie
-//           data={data}
-//           dataKey="visitors" // The object key containing the numbers
-//           nameKey="label" // The object key containing the names/labels
-//           cx="50%" // Horizontal center position
-//           cy="50%" // Vertical center position
-//           outerRadius={120} // Outer size of the pie
-//           fill="#8884d8"
-//           label={({ label, percent }) =>
-//             `${label} ${(percent * 100).toFixed(0)}%`
-//           } // Inline text labels
-//         >
-//           {/* Map over data to assign separate colors to each cell slice */}
-//           {data.map((entry, index) => (
-//             <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-//           ))}
-//         </Pie>
-//       </PieChart>
-//     </ResponsiveContainer>
-//   </div>;
-// };
+const BudgetPieChart = ({ data }: BudgetPieChartProps) => {
+  const totalLimit = data.reduce((total, item) => total + item.maximum, 0);
 
-// export default BudgetPieChart;
+  const totalSpent = data.reduce((total, item) => total + item.spent, 0);
 
-import React from "react";
+  return (
+    <div className="relative mx-auto aspect-square w-full max-w-[500px]">
+      <PieChart
+        responsive
+        style={{
+          width: "100%",
+          height: "100%",
+        }}
+      >
+        {/* Outer ring - budget limit */}
+        <Pie
+          data={data}
+          dataKey="maximum"
+          nameKey="name"
+          cx="50%"
+          cy="50%"
+          innerRadius="60%"
+          outerRadius="80%"
+          stroke="white"
+          strokeWidth={2}
+          isAnimationActive={false}
+          startAngle={90}
+          endAngle={-270}
+        >
+          {data.map((item) => (
+            <Cell key={item.name} fill={item.theme} />
+          ))}
+        </Pie>
 
-const BudgetPieChart = () => {
-  return <div></div>;
+        {/* Inner ring - amount spent */}
+        <Pie
+          data={data}
+          dataKey="spent"
+          nameKey="name"
+          cx="50%"
+          cy="50%"
+          innerRadius="45%"
+          outerRadius="60%"
+          stroke="white"
+          strokeWidth={2}
+          fillOpacity={0.35}
+          isAnimationActive={false}
+          startAngle={90}
+          endAngle={-270}
+        >
+          {data.map((item) => (
+            <Cell key={item.name} fill={item.theme} />
+          ))}
+        </Pie>
+      </PieChart>
+
+      {/* Center of donut */}
+      <div className="pointer-events-none absolute inset-0 flex flex-col items-center justify-center">
+        <p className="text-preset-1 text-grey-900">${totalSpent.toFixed(0)}</p>
+
+        <p className="text-preset-4 text-grey-500">
+          of ${totalLimit.toFixed(0)} limit
+        </p>
+      </div>
+    </div>
+  );
 };
 
 export default BudgetPieChart;
