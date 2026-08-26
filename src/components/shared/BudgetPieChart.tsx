@@ -44,7 +44,7 @@ const BudgetPieChart = ({ data }: BudgetPieChartProps) => {
         {/* Inner ring - amount spent */}
         <Pie
           data={data}
-          dataKey="spent"
+          dataKey="maximum"
           nameKey="name"
           cx="50%"
           cy="50%"
